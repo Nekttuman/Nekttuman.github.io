@@ -1,8 +1,12 @@
 $(document).ready(function(){
+    $('#wrap').hide();
     function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min) ) + min;
     }
     
+    function stopGame(){
+        
+    }
     let pic = [
         'masya.jpg',
         'ау.jpg',
@@ -34,10 +38,14 @@ $(document).ready(function(){
     let after;
     $('.tile img').on('click', function () {
         $(this).css('opacity','1');
-        if ($(after).attr('src') == $(this).attr('src')){
+        if (($(after).attr('src') == $(this).attr('src')) && (after != this)){
             points +=1;
             $('#points').text(points.toString());
             after = ''
+
+            if (points >= 8){
+                $('#wrap').fadeIn();
+            }
         }
         else{
             $(after).css('opacity','0');
@@ -46,8 +54,10 @@ $(document).ready(function(){
         
     });
 
+    $('#restart').on('click', function () {
+        location.reload();
+      })
     
-
     
     
 });
