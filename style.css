@@ -10,6 +10,7 @@
     width: 150px;
     background-size: contain;
 }
+
 body{
     display: flex;
     flex-flow: column;
@@ -36,4 +37,7 @@ body{
     display: flex;
     /* align-items: center; */
     justify-content: center;
+}
+#wrap:hover, .tile:hover{
+    cursor: pointer;
 }
