@@ -1,0 +1,18 @@
+.tile{
+    height: 150px;
+    width: 150px;
+    border: 1px solid rgb(90, 43, 43);
+    background-color: chocolate;
+    margin: 10px;
+}
+.tile img{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+}
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
