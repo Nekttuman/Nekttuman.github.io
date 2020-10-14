@@ -26,7 +26,9 @@ $(document).ready(function(){
     let tiles = $('.tile img');
     $('.tile img').css('opacity','0');
     for(let i = 0; i < 16; i++){
-        $(tiles[i]).attr('src',"img/"+pic[i]);
+        n = getRndInteger(0, pic.length-1)
+        $(tiles[i]).attr('src',"img/"+pic[n]);
+        pic.splice(n,1)
     }
 
     let after;

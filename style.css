@@ -1,7 +1,6 @@
 .tile{
     height: 150px;
     width: 150px;
-    border: 1px solid rgb(90, 43, 43);
     background-color: chocolate;
     margin: 10px;
 }
